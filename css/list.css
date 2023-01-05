@@ -1,0 +1,63 @@
+.sk {
+  position: absolute;
+  left: 185px;
+  top: 39px;
+}
+
+.nav {
+  /* 消除nav中.sk_con ul li a的line-height超出47px的影响 */
+  overflow: hidden;
+}
+.sk_list {
+  float: left;
+}
+.sk_list ul li {
+  float: left;
+}
+.sk_list ul li a {
+  display: inline-block;
+  line-height: 47px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.sk_con {
+  float: left;
+}
+.sk_con ul li {
+  float: left;
+
+}
+.sk_con ul li a {
+  display: inline-block;
+  line-height: 49px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+.sk_con ul li:last-child a::after {
+  display: inline-block;
+  content: '\ea43';
+  font-family: icomoon;
+  margin-left: 2px;
+}
+
+.sk_bd ul li {
+  /* 防止图片超出li盒子的大小 */
+  overflow: hidden;
+  float: left;
+  margin-right: 13px;
+  text-align: center;
+  width: 290px;
+  height: 460px;
+  /* 如果li本身没有边框，鼠标经过会多一个边框，势必会影响图片大小 */
+  /* 最明显的影响是鼠标经过图片时会有一个小小的抖动 */
+  /* 消除该影响的办法可以是最开始就给li添加一个透明边框 */
+  border: 1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.sk_bd ul li:hover {
+  border: 1px solid #c81523;
+}
